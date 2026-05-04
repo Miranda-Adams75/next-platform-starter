@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GG Mascot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="mascot-wrap" title="Click GG">
+        <img id="mascot" alt="GG mascot" />
+      </div>
+
+      <section id="bubble" class="hidden">
+        <button id="close" aria-label="Close">×</button>
+        <h3 id="name">GG</h3>
+        <p id="message">Come on in, sugar. Let’s build this thing.</p>
+        <textarea id="taskInput" rows="2" placeholder="What are we working on?"></textarea>
+        <div class="actions">
+          <button data-mode="push">Give me a push</button>
+          <button data-mode="next">What should I do next?</button>
+          <button data-mode="sell">Make this sell</button>
+        </div>
+      </section>
+
+      <menu id="context-menu" class="hidden">
+        <button id="changeMood">Change Mood</button>
+        <button id="hide30">Hide for 30 Minutes</button>
+        <button id="quit">Quit</button>
+      </menu>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
