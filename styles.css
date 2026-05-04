@@ -1,0 +1,10 @@
+body { margin: 0; background: transparent; overflow: hidden; font-family: Segoe UI, sans-serif; }
+#app { width: 100vw; height: 100vh; position: relative; -webkit-app-region: drag; }
+#mascot { width: 150px; position: absolute; left: 16px; top: 115px; cursor: move; -webkit-app-region: drag; animation: bob 3.2s ease-in-out infinite; filter: drop-shadow(0 10px 20px rgba(0,0,0,.35)); }
+#bubble { width: 270px; position: absolute; top: 60px; left: 175px; background: rgba(25,27,39,.95); color: #fff; border-radius: 14px; border: 1px solid rgba(255,255,255,.16); padding: 10px; box-shadow: 0 10px 25px rgba(0,0,0,.35); -webkit-app-region: no-drag; }
+.hidden { display:none; }
+#close { float:right; border:0; background:none; color:#fff; font-size:18px; cursor:pointer; }
+#prompt { width:100%; margin-top:8px; border-radius:8px; border:1px solid #50556b; background:#0f1320; color:#fff; padding:8px; box-sizing:border-box; }
+.btns { display:grid; gap:6px; margin-top:8px; }
+.btns button { border:0; border-radius:8px; padding:8px; color:#fff; background:#4f62ff; cursor:pointer; }
+@keyframes bob { 0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)} }
