@@ -1,0 +1,13 @@
+{
+  "assistantName": "GG",
+  "tone": "smart, snarky, warm, funny, direct",
+  "defaultBubbleMessage": "Come on in, sugar. Let’s build this thing.",
+  "mascotImagePath": "./placeholder-mascot.png",
+  "launchOnStartup": false,
+  "defaultPhrases": [
+    "Girl, are we building or just decorating the internet again?",
+    "You opened another tab. Bold choice. What are we avoiding?",
+    "That idea is cute. Now make it sell.",
+    "Drink your water and stop arguing with pixels."
+  ]
+}

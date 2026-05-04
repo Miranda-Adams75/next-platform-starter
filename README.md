@@ -1,41 +1,43 @@
-# Next.js on Netlify Platform Starter
+# GG Desktop Mascot (Electron-only)
 
-[Live Demo](https://nextjs-platform-starter.netlify.app/)
+This is a **local desktop app** (not a website) built with Electron.
 
-A modern starter based on Next.js 14 (App Router), Tailwind, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
+## Project structure
+- `main.js` – Electron main process (window setup)
+- `preload.js` – safe bridge from renderer to main
+- `index.html` – UI markup
+- `renderer.js` – UI logic
+- `styles.css` – transparent overlay styles + floating animation
+- `settings.json` – easy customization
 
-In this site, Netlify Core Primitives are used both implictly for running Next.js features (e.g. Route Handlers, image optimization via `next/image`, and more) and also explicitly by the user code.
+## Requirements met
+- Transparent, frameless, always-on-top desktop window
+- Draggable mascot image (window drag region)
+- Gentle floating/bobbing mascot animation
+- Click mascot to open/close chat bubble
+- Runs locally with Electron (no web hosting)
 
-Implicit usage means you're using any Next.js functionality and everything "just works" when deployed - all the plumbing is done for you. Explicit usage is framework-agnostic and typically provides more features than what Next.js exposes.
-
-## Deploying to Netlify
-
-This site requires [Netlify Next Runtime v5](https://docs.netlify.com/frameworks/next-js/overview/) for full functionality. That version is now being gradually rolled out to all Netlify accounts.
-
-After deploying via the button below, please visit the **Site Overview** page for your new site to check whether it is already using the v5 runtime. If not, you'll be prompted to opt-in to to v5.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
-
-## Developing Locally
-
-1. Clone this repository, then run `npm install` in its root directory.
-
-2. For the starter to have full functionality locally (e.g. edge functions, blob store), please ensure you have an up-to-date version of Netlify CLI. Run:
-
-```
-npm install netlify-cli@latest -g
+## Install
+```bash
+npm install
 ```
 
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
-
-```
-netlify link
-```
-
-4. Then, run the Next.js development server via Netlify CLI:
-
-```
-netlify dev
+## Run in development
+```bash
+npm run dev
 ```
 
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
+## Build Windows installer
+```bash
+npm run build
+```
+
+## Placeholder image (no binary assets included)
+No image file is shipped in this repo by design.
+
+1. Add your PNG to project root (example: `my-gg.png`)
+2. Update `settings.json`:
+```json
+"mascotImagePath": "./my-gg.png"
+```
+3. Restart app.
